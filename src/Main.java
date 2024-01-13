@@ -7,11 +7,24 @@ public class Main {
     public static void main(String[] args) {
 
         Random random = new Random();
-        int randomNumber = random.nextInt(10)+1;
-        System.out.println(randomNumber);
 
-        String userinput = JOptionPane.showInputDialog("enter a number between 1 to 10 ");
-        JOptionPane.showMessageDialog(null,userinput);
+        int userinput;
+        int randomNumber;
+        int chances = 5;
+
+        for (int i =0 ; i < chances ; i++){
+            randomNumber = random.nextInt(10)+1;
+            userinput = Integer.parseInt(JOptionPane.showInputDialog("enter a number between 1 to 10 "));
+            if(userinput == randomNumber){
+                JOptionPane.showMessageDialog(null,"Congratulations you guessed the number");
+            } else if (userinput > randomNumber) {
+                JOptionPane.showMessageDialog(null,"Too high to random number ");
+            } else if (userinput < randomNumber) {
+                JOptionPane.showMessageDialog(null,"Too low to the random number");
+            }else{
+                System.out.println("Empty number");
+            }
+        }
 
     }
 }
