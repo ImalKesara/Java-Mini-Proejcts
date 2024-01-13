@@ -10,7 +10,8 @@ public class Main {
         int randomNumber = random.nextInt(10)+1;
         System.out.println(randomNumber);
 
-
+        String userinput = JOptionPane.showInputDialog("enter a number between 1 to 10 ");
+        JOptionPane.showMessageDialog(null,userinput);
 
     }
 }
