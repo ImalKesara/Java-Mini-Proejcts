@@ -27,7 +27,7 @@ public class Main {
             }
         }
         if(userinput != randomNumber){
-            System.out.println("Game over you took five chances !!! ");
+            System.out.println("Game over you took five chances !!!!");
         }
     }
 }
