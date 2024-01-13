@@ -8,8 +8,8 @@ public class Main {
 
         Random random = new Random();
 
-        int userinput;
-        int randomNumber;
+        int userinput= 0;
+        int randomNumber= 0;
         int chances = 5;
 
         for (int i =0 ; i < chances ; i++){
@@ -17,6 +17,7 @@ public class Main {
             userinput = Integer.parseInt(JOptionPane.showInputDialog("enter a number between 1 to 10 "));
             if(userinput == randomNumber){
                 JOptionPane.showMessageDialog(null,"Congratulations you guessed the number");
+                break;
             } else if (userinput > randomNumber) {
                 JOptionPane.showMessageDialog(null,"Too high to random number ");
             } else if (userinput < randomNumber) {
@@ -25,6 +26,8 @@ public class Main {
                 System.out.println("Empty number");
             }
         }
-
+        if(userinput != randomNumber){
+            System.out.println("Game over you took five chances !!! ");
+        }
     }
 }
