@@ -26,7 +26,7 @@ public class Main {
             System.out.println(language);
             switch (language) {
                 case "English":
-                    System.out.println("hi");
+                    System.out.println("Hey Imal");
                     hello();
                     break;
                 case "Sinhala":
@@ -42,7 +42,18 @@ public class Main {
     }
 
     static  void hello(){
-        System.out.println("wada wada");
+        int balance = 5000;
+        System.out.println("1. Check Balance");
+        System.out.println("2. Cash deposit");
+        System.out.println("3. exit");
+        int option = Integer.parseInt(JOptionPane.showInputDialog("Choose option 1-3"));
+        switch (option){
+            case 1 :
+                System.out.println("$"+balance);
+                break;
+            default:
+                System.out.println("Choose right number");
+        }
     }
 
 
