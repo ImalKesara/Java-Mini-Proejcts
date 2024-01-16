@@ -24,20 +24,27 @@ public class Main {
             System.out.println("English or Sinhala");
             String language = JOptionPane.showInputDialog("Enter ur laguage");
             System.out.println(language);
-            switch (language){
+            switch (language) {
                 case "English":
                     System.out.println("hi");
+                    hello();
                     break;
-
-
-
-
-
-        }else{
+                case "Sinhala":
+                    System.out.println("hey");
+                default:
+                    System.out.println("Select english or sinhala");
+            }
+        }
+        else{
             System.out.println("wrong");
         }
 
     }
+
+    static  void hello(){
+        System.out.println("wada wada");
+    }
+
 
 
 }
