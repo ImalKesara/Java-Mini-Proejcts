@@ -1,34 +1,28 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class Main {
     public static void main(String[] args) {
 
-        Random random = new Random();
+        int number = Integer.parseInt(JOptionPane.showInputDialog("Enter ur account number"));
+        int scretOS = Integer.parseInt(JOptionPane.showInputDialog("Enter ur secret number"));
 
-        int userinput= 0;
-        int randomNumber= 0;
-        int chances = 5;
+        int accNumber = 20010730;
+        int sNumber = 5566;
 
-        for (int i =0 ; i < chances ; i++){
-            randomNumber = random.nextInt(10)+1;
-            userinput = Integer.parseInt(JOptionPane.showInputDialog("enter a number between 1 to 10 "));
-            if(userinput == randomNumber){
-                JOptionPane.showMessageDialog(null,"Congratulations ❤");
-                break;
-            } else if (userinput > randomNumber) {
-                JOptionPane.showMessageDialog(null,"Too high to random number ");
-            } else if (userinput < randomNumber) {
-                JOptionPane.showMessageDialog(null,"Too low to the random number");
-            }else{
-                System.out.println("Empty number");
-            }
+        if(accNumber == number && sNumber == scretOS ){
+            System.out.println("log in");
+            System.out.println("English or Sinhala");
+
+        }else{
+            System.out.println("wrong");
         }
-        if(userinput != randomNumber){
-//            System.out.println("Game over you took five chances !!!!");
-            JOptionPane.showMessageDialog(null,"Game over you took five chances !!!!");
-        }
+
     }
+
+
 }
