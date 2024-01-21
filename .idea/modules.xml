@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Curreny Convertor/Curreny Convertor.iml" filepath="$PROJECT_DIR$/Curreny Convertor/Curreny Convertor.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java Mini Proejcts.iml" filepath="$PROJECT_DIR$/Java Mini Proejcts.iml" />
     </modules>
   </component>
