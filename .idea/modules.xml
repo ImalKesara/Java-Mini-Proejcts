@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Curreny Convertor/03. Curreny Convertor.iml" filepath="$PROJECT_DIR$/Curreny Convertor/03. Curreny Convertor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Decimal to Binary/Decimal to Binary.iml" filepath="$PROJECT_DIR$/Decimal to Binary/Decimal to Binary.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java Mini Proejcts.iml" filepath="$PROJECT_DIR$/Java Mini Proejcts.iml" />
     </modules>
   </component>
