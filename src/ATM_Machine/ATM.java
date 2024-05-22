@@ -1,3 +1,5 @@
+package ATM_Machine;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.ArrayList;
@@ -5,7 +7,7 @@ import java.util.Random;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
-public class Main {
+public class ATM {
     public static void main(String[] args) {
 
 

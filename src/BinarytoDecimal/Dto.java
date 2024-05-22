@@ -1,10 +1,8 @@
-import javax.swing.*;
-import java.util.Scanner;
-import java.util.Arrays;
+package BinarytoDecimal;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+import java.util.Scanner;
+
+public class Dto {
     public static void main(String[] args) {
 
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
@@ -22,9 +20,9 @@ public class Main {
         int remain;
 
         while(decimal != 0){
-             remain = decimal % 2 ;
-             decimal/=2;
-             System.out.print(remain);
+            remain = decimal % 2 ;
+            decimal/=2;
+            System.out.print(remain);
 
         }
     }

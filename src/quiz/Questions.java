@@ -13,6 +13,19 @@ public class Questions {
         this.ans = ans;
     }
 
+    @Override
+    public String toString() {
+        return "Questions{" +
+                "id=" + id +
+                ", question='" + question + '\'' +
+                ", opt1='" + opt1 + '\'' +
+                ", opt2='" + opt2 + '\'' +
+                ", opt3='" + opt3 + '\'' +
+                ", opt4='" + opt4 + '\'' +
+                ", ans='" + ans + '\'' +
+                '}';
+    }
+
     private String question;
 
     public int getId() {
