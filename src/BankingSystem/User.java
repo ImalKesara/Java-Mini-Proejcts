@@ -22,7 +22,29 @@ public class User {
         String email = scanner.nextLine();
         System.out.println("Password : -");
         String pwd = scanner.nextLine();
-        if()
+        if(user_exists(email)){
+            System.out.println("User Already Exists for this Email Address!!");
+            return;
+        }else{
+            String register_query = "INSERT INTO user(full_name,email,password) VALUES (?,?,?)";
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement(register_query);
+                preparedStatement.setString(1,fullname);
+                preparedStatement.setString(2,email);
+                preparedStatement.setString(3,pwd);
+                int affectedRows  = preparedStatement.executeUpdate();
+                if(affectedRows > 0 ){
+                    System.out.println("Registration successfully");
+                }else{
+                    System.out.println("Registration Failed");
+                }
+
+            } catch (SQLException e) {
+               e.printStackTrace();
+            }
+
+        }
+
 
     }
 
