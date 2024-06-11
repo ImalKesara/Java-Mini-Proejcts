@@ -6,7 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class User {
+public class User implements Userfunc{
+
     private Connection connection;
     private Scanner scanner;
     public User(Connection connection, Scanner scanner) {
@@ -42,13 +43,10 @@ public class User {
             } catch (SQLException e) {
                e.printStackTrace();
             }
-
         }
-
-
     }
 
-    private boolean user_exists(String email){
+    public boolean user_exists(String email){
         String query = "SELECT * FROM user WHERE email = ? ";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
