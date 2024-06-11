@@ -8,7 +8,7 @@ import java.util.Scanner;
 import com.mysql.cj.jdbc.Driver;
 
 public class BankingApp {
-    private static final String url = "jdbc:mysql://localhost:3306/hospital";
+    private static final String url = "jdbc:mysql://localhost:3306/banksystem";
     private static final String user = "root";
     private static final String pwd  = "Wolf1234@";
 
@@ -43,7 +43,7 @@ public class BankingApp {
                 int choice = scanner.nextInt();
                 switch(choice){
                     case 1:
-                        System.out.println("user class");
+                        user.register();
                         break;
                     case 2:
                         System.out.println("login class");
