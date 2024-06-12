@@ -46,11 +46,62 @@ public class BankingApp {
                         user.register();
                         break;
                     case 2:
-                        System.out.println("login class");
+                        email =user.login();
+                        if(email!=null){
+                            System.out.println();
+                            System.out.println("User loged in");
+                            if(!accounts.account_exists(email)){
+                                System.out.println();
+                                System.out.println("1. Open a new Bank Account");
+                                System.out.println("2. Exit");
+                                if(scanner.nextInt()==1){
+                                    accountNumber = accounts.openAccount(email);
+                                    System.out.println("Account creation successfully");
+                                    System.out.println("Your account number is " + accountNumber);
+                                }else{
+                                    break;
+                                }
+                            }
+                            //if exists
+                            accountNumber = accounts.getAccountNumber(email);
+                            int choiceTwo = 0;
+                            while (choiceTwo != 5){
+                                System.out.println();
+                                System.out.println("1. Debit Money");
+                                System.out.println("2. Credit Money");
+                                System.out.println("3. Tranfer Money");
+                                System.out.println("4. Check balance");
+                                System.out.println("5. Exit");
+                                choiceTwo = scanner.nextInt();
+                                switch (choiceTwo){
+                                    case 1:
+                                        break;
+                                    case 2:
+                                        break
+                                    case 3:
+                                        break;
+                                    case 4:
+                                        break;
+                                    case 5:
+                                        choiceTwo = 5;
+                                        break;
+                                    default:
+                                        System.out.println("Invalid choice");
+                                        break;
+                                }
+                            }
+
+
+                        }else{
+                            System.out.println("Please register ");
+                        }
                         break;
                     case 3:
                         loop =false;
-
+                        break;
+                    default:
+                        System.out.println("Please check ur input");
+                        break;
                 }
             }
 
