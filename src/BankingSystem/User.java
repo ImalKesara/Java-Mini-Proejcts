@@ -15,6 +15,31 @@ public class User implements Userfunc{
         this.scanner = scanner;
     }
 
+
+    public String login(){
+        scanner.nextLine();
+        System.out.println("Enter Email :-");
+        String email = scanner.nextLine();
+        System.out.println("Enter password :-");
+        String pwd  = scanner.nextLine();
+        String login_query  = "SELECT * FROM user WHERE email = ? AND password = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(login_query);
+            preparedStatement.setString(1,email);
+            preparedStatement.setString(2,pwd);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                return email;
+            }else{
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return  null;
+    }
+
+
     public void register(){
         scanner.nextLine();
         System.out.println("Full name : -");
