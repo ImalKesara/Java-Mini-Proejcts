@@ -78,6 +78,7 @@ public class BankingApp {
                                         accountManager.debitMoney(accountNumber);
                                         break;
                                     case 2:
+                                        accountManager.creditMoney(accountNumber);
                                         break;
                                     case 3:
                                         break;
