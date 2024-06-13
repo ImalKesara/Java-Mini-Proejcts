@@ -69,15 +69,16 @@ public class BankingApp {
                                 System.out.println();
                                 System.out.println("1. Debit Money");
                                 System.out.println("2. Credit Money");
-                                System.out.println("3. Tranfer Money");
+                                System.out.println("3. Transfer Money");
                                 System.out.println("4. Check balance");
                                 System.out.println("5. Exit");
                                 choiceTwo = scanner.nextInt();
                                 switch (choiceTwo){
                                     case 1:
+                                        accountManager.debitMoney(accountNumber);
                                         break;
                                     case 2:
-                                        break
+                                        break;
                                     case 3:
                                         break;
                                     case 4:
@@ -90,13 +91,13 @@ public class BankingApp {
                                         break;
                                 }
                             }
-
-
                         }else{
                             System.out.println("Please register ");
                         }
                         break;
                     case 3:
+                        System.out.println("Thank you for using banking system");
+                        System.out.println("Exiting the system");
                         loop =false;
                         break;
                     default:
