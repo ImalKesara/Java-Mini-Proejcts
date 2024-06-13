@@ -81,6 +81,7 @@ public class BankingApp {
                                         accountManager.creditMoney(accountNumber);
                                         break;
                                     case 3:
+                                        accountManager.tranferMoney(accountNumber);
                                         break;
                                     case 4:
                                         break;
