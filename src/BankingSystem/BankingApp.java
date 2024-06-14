@@ -84,6 +84,7 @@ public class BankingApp {
                                         accountManager.tranferMoney(accountNumber);
                                         break;
                                     case 4:
+                                        accountManager.viewBalance(accountNumber);
                                         break;
                                     case 5:
                                         choiceTwo = 5;

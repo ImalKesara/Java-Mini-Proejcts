@@ -127,6 +127,26 @@ public class AccountManager {
 
    }
 
+   public void viewBalance(long accountNumber){
+       scanner.nextLine();
+       System.out.println("Enter your security pin");
+       String secuirtyPin = scanner.nextLine();
+       try {
+           connection.setAutoCommit(false);
+           PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM accounts WHERE account_number = ? AND security_pin = ?");
+           preparedStatement.setLong(1,accountNumber);
+           preparedStatement.setString(2,secuirtyPin);
+           ResultSet resultSet = preparedStatement.executeQuery();
+           if(resultSet.next()){
+               double currentBalance = resultSet.getDouble("balance");
+               System.out.println("Your balance is " + currentBalance);
+           }
+       } catch (SQLException e) {
+           e.printStackTrace();
+       }
+   }
+
+
    public void creditMoney(long accountNumber){
        scanner.nextLine();
        System.out.println("Enter credit amount to ");
