@@ -29,10 +29,30 @@ public class User implements Userfunc{
             preparedStatement.setString(2,pwd);
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next()){
-                return email;
-            }else{
-                return null;
+                String admin = resultSet.getString("full_name");
+                if(admin.equals("admin")){
+                    System.out.println("you are in admin mode");
+                    System.out.println("Enter name u wish to delete :)");
+                    String name = scanner.nextLine();
+                    PreparedStatement preparedStatement1 = connection.prepareStatement("DELETE FROM user WHERE full_name = ?");
+                    preparedStatement1.setString(1,name);
+                    int AffectedRow = preparedStatement1.executeUpdate();
+                    if(AffectedRow > 0 ){
+                        System.out.println("Account " + name + "deleted");
+                        return null;
+                    }else{
+                        System.out.println("account not found");
+                        return null;
+                    }
+                }else{
+                    if(resultSet.next()){
+                        return email;
+                    }else{
+                        return null;
+                    }
+                }
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
