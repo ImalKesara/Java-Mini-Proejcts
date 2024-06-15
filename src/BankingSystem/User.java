@@ -33,12 +33,15 @@ public class User implements Userfunc{
                 if(admin.equals("admin")){
                     System.out.println("you are in admin mode");
                     System.out.println("Enter name u wish to delete :)");
-                    String name = scanner.nextLine();
+                    String name = scanner.nextLine().toLowerCase();
                     PreparedStatement preparedStatement1 = connection.prepareStatement("DELETE FROM user WHERE full_name = ?");
+                    PreparedStatement preparedStatement2 = connection.prepareStatement("DELETE FROM accounts WHERE full_name = ?");
                     preparedStatement1.setString(1,name);
-                    int AffectedRow = preparedStatement1.executeUpdate();
-                    if(AffectedRow > 0 ){
-                        System.out.println("Account " + name + "deleted");
+                    preparedStatement2.setString(1,name);
+                    int AffectedRow1 = preparedStatement1.executeUpdate();
+                    int AffectedRow2 = preparedStatement2.executeUpdate();
+                    if(AffectedRow1 > 0 && AffectedRow2 > 0){
+                        System.out.println("Account" + name + "deleted");
                         return null;
                     }else{
                         System.out.println("account not found");
