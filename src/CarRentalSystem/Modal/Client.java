@@ -1,4 +1,4 @@
-package CarRentalSystem;
+package CarRentalSystem.Modal;
 
 public class Client extends User {
     public Client(){

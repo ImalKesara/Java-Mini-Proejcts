@@ -1,4 +1,4 @@
-package CarRentalSystem;
+package CarRentalSystem.Modal;
 
 abstract public class User {
     private int ID;

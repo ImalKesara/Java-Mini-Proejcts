@@ -1,4 +1,4 @@
-package CarRentalSystem;
+package CarRentalSystem.Modal;
 
 public class Admin extends User {
     public Admin(){
