@@ -12,6 +12,8 @@ abstract public class User {
 
     }
 
+    public abstract void showList();
+
     public int getID() {
         return ID;
     }
