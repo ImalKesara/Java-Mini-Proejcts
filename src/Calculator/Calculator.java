@@ -2,7 +2,7 @@ package Calculator;
 
 import java.util.Scanner;
 
-public class Calculator extends  Operations{
+public class Calculator extends Operations{
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
