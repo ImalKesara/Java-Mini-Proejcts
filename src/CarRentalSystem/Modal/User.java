@@ -1,5 +1,7 @@
 package CarRentalSystem.Modal;
 
+import java.util.Scanner;
+
 abstract public class User {
     private int ID;
     private String firstName;
@@ -8,11 +10,14 @@ abstract public class User {
     private String phoneNumber;
     private String password;
 
+//    type = 0 :- client
+//    type = 1 :- admin
+
     public User(){
 
     }
 
-    public abstract void showList();
+    public abstract void showList(Database database, Scanner sc);
 
     public int getID() {
         return ID;
