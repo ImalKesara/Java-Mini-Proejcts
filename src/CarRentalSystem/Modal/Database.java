@@ -6,7 +6,6 @@ public class Database {
     private String url = "jdbc:mysql://localhost:3306/carrentsystem";
     private String user = "root";
     private String pwd = "Wolf1234@";
-    private PreparedStatement preparedStatement;
     private Statement statement;
 
     public Database(){
