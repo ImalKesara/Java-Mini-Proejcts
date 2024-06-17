@@ -1,12 +1,19 @@
 package CarRentalSystem.Modal;
 
+import CarRentalSystem.Controller.AddnewAdmin;
+
+import java.util.Scanner;
+
 public class Admin extends User {
-    public Admin(){
+
+    private  Operations[] operations  = new Operations[] {new AddnewAdmin()};
+     public Admin(){
         super();
     }
 
+
     @Override
-    public void showList() {
+    public void showList(Database database, Scanner sc) {
         System.out.println("\n 1.Add New Car");
         System.out.println("2.View Car");
         System.out.println("3. Update Car ");
@@ -14,7 +21,8 @@ public class Admin extends User {
         System.out.println("5. Add New Admin");
         System.out.println("6. Show Rents");
         System.out.println("7. Quit");
-
+        int i = sc.nextInt();
+        operations[i].operations(database,sc,null);
 
     }
 }
