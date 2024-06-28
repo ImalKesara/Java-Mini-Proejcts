@@ -12,6 +12,7 @@ abstract public class User {
 
 //    type = 0 :- client
 //    type = 1 :- admin
+//    type =
 
     public User(){
 

@@ -7,15 +7,20 @@ public class Database {
     private String user = "root";
     private String pwd = "Wolf1234@";
     private Statement statement;
+    private Connection connection;
 
     public Database(){
         try {
-            Connection connection = DriverManager.getConnection(url,user,pwd);
+            connection = DriverManager.getConnection(url,user,pwd);
+            statement = connection.createStatement();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
+    }
+    public Connection getConnection(){
+        return connection;
     }
 
     public Statement getStatement() {

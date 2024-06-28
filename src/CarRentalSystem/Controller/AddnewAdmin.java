@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class AddnewAdmin implements Operations {
 
     @Override
-    public void operations(Database database, User user, Scanner sc) {
+    public void operations(Database database,Scanner sc,User user) {
         System.out.println("enter first name ");
         String firstName = sc.next();
         System.out.println("Enter last name");
