@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Scanner;
-import com.mysql.cj.jdbc.Driver;
+//import com.mysql.cj.jdbc.Driver;
 
 public class BankingApp {
     private static final String url = "jdbc:mysql://localhost:3306/banksystem";
