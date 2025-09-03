@@ -48,40 +48,38 @@ public class Board {
     }
 
     public boolean winner(char symbol) {
-        int count = 0;
-        if ((girds[0][0] == symbol) && (girds[1][1] == symbol) && (girds[2][2] == symbol)) {
-            count = 3;
-        } else if ((girds[0][2] == symbol) && (girds[1][1] == symbol) && (girds[2][0] == symbol)) {
-            count = 3;
-        } else {
-            for (int row = 0; row < girds[row].length; row++) {
-                //horizontal scenario
-                for (int column = 0; column < girds[column].length; column++) {
-                    if (girds[row][column] == symbol) {
-                        count++;
-                    } else {
-                        count = 0;
-                    }
-                }
-                //vertical scenario
-                for (int column = 0; column < girds[column].length; column++) {
-                    if (girds[column][row] == symbol) {
-                        count++;
-                    } else {
-                        count = 0;
-                    }
-                }
 
+        if ((girds[0][0] == symbol) && (girds[1][1] == symbol) && (girds[2][2] == symbol) ||
+                (girds[0][2] == symbol) && (girds[1][1] == symbol) && (girds[2][0] == symbol)) {
+            return true;
+        }
+
+        for (int row = 0; row < girds.length; row++) {
+            int rowCount = 0;
+            int columnCount = 0;
+
+            //horizontal scenario
+            for (int column = 0; column < girds.length; column++) {
+                if (girds[row][column] == symbol) {
+                    rowCount++;
+                }
+            }
+            //vertical scenario
+            for (int column = 0; column < girds.length; column++) {
+                if (girds[column][row] == symbol) {
+                    columnCount++;
+                }
+            }
+            if (rowCount == 3 || columnCount == 3) {
+                return true;
             }
         }
-        return count == 3;
+        return false;
     }
 
-
     public void insertMove(int row, int column, char symbol) {
+        isFull();
         girds[row][column] = symbol;
         printBoard();
     }
-
-
 }

@@ -8,13 +8,14 @@ public class TicTacToe {
         Player computer = new Player('O', "Computer", true);
         Player currentPlayer = me;
 
-        while (!board.isFull()) {
+        while (!board.winner(currentPlayer.getSymbol())) {
             if (currentPlayer == me) {
                 currentPlayer = computer;
                 int[] arr = currentPlayer.getMove(board);
                 int x = arr[0];
                 int y = arr[1];
                 board.insertMove(x, y, currentPlayer.getSymbol());
+
             } else {
                 currentPlayer = me;
                 int[] arr = currentPlayer.getMove(board);
@@ -23,5 +24,8 @@ public class TicTacToe {
                 board.insertMove(x, y, currentPlayer.getSymbol());
             }
         }
+
+        System.out.println(board.winner(currentPlayer.getSymbol()) ? currentPlayer.getName() + " Wins " : "" );
+
     }
 }
