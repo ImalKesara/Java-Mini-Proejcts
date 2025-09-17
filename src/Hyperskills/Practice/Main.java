@@ -1,33 +1,41 @@
 package Hyperskills.Practice;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int D = 0,C = 0,B = 0, A = 0;
-        int n = scanner.nextInt();
-        char[] characters = new char[n];
+        Scanner sc = new Scanner(System.in);
+//        boolean con = false;
+//        int c =  sc.nextInt();
+//        int[] numbers = new int[c];
+//        for (int i = 0; i < numbers.length; i++) {
+//            numbers[i] = sc.nextInt();
+//        }
+//
+//
+//        int n = sc.nextInt();
+//        int m = sc.nextInt();
+//
+//        for(int i = 0,j=1; i < numbers.length; i++, j++){
+//            if((n == numbers[i] && m == numbers[j]) || (n == numbers[j] && m == numbers[i]) ){
+//                con = true;
+//                break;
+//            }
+//        }
+//
+//        System.out.println(con);
 
-        for(int i=0; i < characters.length ; i++){
-            characters[i] = scanner.next().charAt(0);
-                if (characters[i] == 'D') {
-                    D++;
-                } else if (characters[i] == 'C') {
-                    C++;
-                } else if (characters[i] == 'B') {
-                    B++;
-                } else if (characters[i] == 'A') {
-                    A++;
-                } else {
-                    System.out.println("Not a valid character");
-                    System.out.println("Enter D or C or B or A");
-                    System.out.println("i value " + i);
-                    i--;
-                }
-        }
 
-        System.out.println(D + " " + C + " " + B + " " + A);
+
+        String str = " Inside Main";
+        String subs = str.substring(0, 6);
+        long n = subs.trim().length();
+        System.out.println(n);
 
     }
+
+
 }
