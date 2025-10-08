@@ -1,7 +1,5 @@
 package Hyperskills.Smart_Chat_Bot;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -10,7 +8,7 @@ public class Main {
     final static ArrayList<Questions> questions = new ArrayList<>();
 
     public static void main(String[] args) {
-        greetings("Kesara", 2001);
+        greetings("MGK", 1990);
         askForName();
         guessAge();
         count();
@@ -94,8 +92,7 @@ public class Main {
     }
 
     static void end() {
-        String name = scanner.nextLine();
-        System.out.println("Congratulations, have a nice day!"); // Do not change this text
+        System.out.println("Congratulations, have a nice day!");
     }
 
 }
